@@ -23,4 +23,4 @@ LISTENADDR | **Defaults** to `:80`. Can be used to set the IP and port to listen
 
 # Container
 
-korylprince/http-file-upload:<version>
+ghcr.io/korylprince/http-file-upload:\<version\>
