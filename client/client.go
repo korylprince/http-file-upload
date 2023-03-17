@@ -9,6 +9,7 @@ import (
 	"net/http"
 )
 
+// File is an uploaded file
 type File struct {
 	Name string
 	Data []byte
@@ -19,6 +20,7 @@ type file struct {
 	Data string `json:"data"`
 }
 
+// Post uploads files to an API endpoint
 func Post(url, token string, files []*File) error {
 	var encoded []*file
 	for _, f := range files {

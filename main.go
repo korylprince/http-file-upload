@@ -14,11 +14,13 @@ import (
 	securejoin "github.com/cyphar/filepath-securejoin"
 )
 
+// File is an uploaded file
 type File struct {
 	Name string `json:"name"`
 	Data string `json:"data"`
 }
 
+// WriteTo implement the io.WriterTo interface
 func (f *File) WriteTo(w io.Writer) (int64, error) {
 	buf, err := base64.URLEncoding.DecodeString(f.Data)
 	if err != nil {
